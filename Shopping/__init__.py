@@ -11,6 +11,8 @@ def create_app(config_type):
     # 加载日志处理的工具
 
     # 初始化SQLALCHEMY对象
+    from comment.models import db
+    db.init_app(app)
 
     # 加载蓝图
     return app
