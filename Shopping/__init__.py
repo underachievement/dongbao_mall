@@ -15,4 +15,8 @@ def create_app(config_type):
     db.init_app(app)
 
     # 加载蓝图
+    from Shopping.resource.user import user_bp
+    app.register_blueprint(user_bp)
+
+
     return app
