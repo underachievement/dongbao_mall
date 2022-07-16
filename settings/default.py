@@ -13,6 +13,12 @@ class Config:
     SQLALCHEMY_DATABASE_URI=DB_URI #数据库的连接
     SQLALCHEMY_TRACK_MODIFICATIONS=False    # 不需要追踪数据库数据的修改
 
+    #日志的配置
+    LOGGING_LEVEL="DEBUG"
+    LOGGING_FILE_DIR="logs/"
+    LOGGING_FILE_MAX_BYTES=1024*1024*300
+    LOGGING_FILE_BACKUP=100
+
 #开发环境下的配置信息
 class DevelopmentConfig(Config):
     DEBUG=True

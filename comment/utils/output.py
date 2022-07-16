@@ -6,7 +6,7 @@ from json import dumps
 
 
 # 自定义json格式
-def output_json(data, code, headers=None):
+def output_json(data, code, headers='None'):
     """Makes a Flask response with a JSON encoded body"""
 
     # 此处为自己添加

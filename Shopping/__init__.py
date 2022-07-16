@@ -9,13 +9,15 @@ def create_app(config_type):
     app.config.from_object(map_config.get(config_type))
 
     # 加载日志处理的工具
+    from comment.utils.logging import create_logger
+    create_logger(app)
 
     # 初始化SQLALCHEMY对象
     from comment.models import db
     db.init_app(app)
 
     # 加载蓝图
-    from Shopping.resource.user import user_bp
+    from Shopping.resources.user import user_bp
     app.register_blueprint(user_bp)
 
 
